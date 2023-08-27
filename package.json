@@ -2,6 +2,7 @@
   "name": "indecisive",
   "displayName": "Indecisive",
   "description": "an extension that inverses many words, such as booleans and yes to save precious keystrokes (especially editing dotfiles)",
+  "publisher": "indecisive",
   "version": "0.0.1",
   "private": true,
   "engines": {
@@ -10,15 +11,17 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "*"
-  ],
+  "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "indecisive.invert",
         "title": "Indecisive: Invert word under the cursor"
+      },
+      {
+        "command": "indecisive.activeLangs",
+        "title": "Indecisive: Currently active languages"
       }
     ],
     "configuration": {

@@ -1,15 +1,21 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from "vscode"
-import { getInvertedWord, hoverProvider } from "./invert"
+import { activeLanguages, getInvertedWord } from "./invert"
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
   // Use the console to output diagnostic information (console.log) and errors (console.error)
   // This line of code will only be executed once when your extension is activated
-  vscode.languages.registerHoverProvider("javascript", hoverProvider)
-  let disposable = vscode.commands.registerCommand("indecisive.invert", () => {
+  // vscode.languages.registerHoverProvider("javascript", hoverProvider)
+  let langs = vscode.commands.registerCommand("indecisive.activeLangs", () => {
+    vscode.window.showInformationMessage(
+      [...activeLanguages].join(", ") + " are active"
+    )
+  })
+
+  let invert = vscode.commands.registerCommand("indecisive.invert", () => {
     const editor = vscode.window.activeTextEditor
 
     if (!editor) {
@@ -36,7 +42,7 @@ export function activate(context: vscode.ExtensionContext) {
     vscode.window.showInformationMessage(text)
   })
 
-  context.subscriptions.push(disposable)
+  context.subscriptions.push(invert, langs)
 }
 
 // This method is called when your extension is deactivated
