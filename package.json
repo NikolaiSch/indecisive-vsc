@@ -1,6 +1,6 @@
 {
   "name": "indecisive",
-  "displayName": "indecisive",
+  "displayName": "Indecisive",
   "description": "an extension that inverses many words, such as booleans and yes to save precious keystrokes (especially editing dotfiles)",
   "version": "0.0.1",
   "private": true,
@@ -18,9 +18,40 @@
     "commands": [
       {
         "command": "indecisive.invert",
-        "title": "indecisive: Invert word under the cursor"
+        "title": "Indecisive: Invert word under the cursor"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Indecisive",
+      "properties": {
+        "indecisive.languages.general": {
+          "type": "boolean",
+          "default": true,
+          "description": "This pack includes booleans, yes/no, and continue/break"
+        },
+        "indecisive.languages.maths": {
+          "type": "boolean",
+          "default": true,
+          "description": "This is only math and CompSci symbols  (+ -) (* /) (+= -=) (*= /=) (> <=) (< >=) (== !=) (=== !==) (&& ||) (<<< >>>) (<< >>) and more"
+        },
+        "indecisive.languages.python": {
+          "type": "boolean",
+          "default": true,
+          "description": "This module is yet to be fleshed out (1 completion)",
+          "additionalItems": true
+        },
+        "indecisive.languages.rust": {
+          "type": "boolean",
+          "default": true,
+          "description": "By far the most in depth module"
+        },
+        "indecisive.languages.typescript": {
+          "type": "boolean",
+          "default": true,
+          "description": "Typescript and Javascript, with some extra symbols for the TS Nerds"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "pnpm run compile",

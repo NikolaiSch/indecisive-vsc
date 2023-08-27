@@ -19,11 +19,11 @@ export const rust = {
   const: "static",
   static: "const",
 
-  "println!": "print!",
-  "print!": "println!",
+  println: "print",
+  print: "println",
 
-  "eprintln!": "eprint!",
-  "eprint!": "eprintln!",
+  eprintln: "eprint",
+  eprint: "eprintln",
 
   "&mut": "&dyn",
   "&dyn": "&mut",
