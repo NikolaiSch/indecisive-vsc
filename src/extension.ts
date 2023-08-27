@@ -21,7 +21,7 @@ export function activate(context: vscode.ExtensionContext) {
     "indecisive.counterStats",
     () => {
       let symbols: { key: string; val: number }[] = []
-      vscode.commands.executeCommand("work")
+
       for (const [key] of context.globalState.keys()) {
         let val = context.globalState.get(key, 0) as number
         if (val > 0) {
