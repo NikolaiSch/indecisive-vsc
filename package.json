@@ -1,7 +1,7 @@
 {
   "name": "indecisive",
   "displayName": "indecisive",
-  "description": "Usage Error: The nearest package directory (/Users/vii/indecisive/indecisive) doesn't seem to be part of the pr",
+  "description": "an extension that inverses many words, such as booleans and yes to save precious keystrokes (especially editing dotfiles)",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.81.0"
