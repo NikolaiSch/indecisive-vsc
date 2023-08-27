@@ -24,6 +24,27 @@
         "title": "Indecisive: Currently active languages"
       }
     ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "indecisive",
+          "title": "Indecisive",
+          "icon": "./icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "indecisive": [
+        {
+          "id": "indecisive-statistics",
+          "name": "Statistics"
+        },
+        {
+          "id": "indecisive-langs",
+          "name": "Languages"
+        }
+      ]
+    },
     "configuration": {
       "title": "Indecisive",
       "properties": {
