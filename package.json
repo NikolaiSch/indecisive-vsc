@@ -80,10 +80,11 @@
   "scripts": {
     "lint": "eslint src --ext ts",
     "test": "pnpm ./out/test/runTest.js",
-    "vscode:prepublish": "npm run esbuild-base -- --minify",
+    "vscode:prepublish": "pnpm esbuild-base -- --minify",
     "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
-    "esbuild": "npm run esbuild-base -- --sourcemap",
-    "esbuild-watch": "npm run esbuild-base -- --sourcemap --watch",
+    "esbuild": "pnpm esbuild-base -- --sourcemap",
+    "esbuild-watch": "pnpm esbuild-base -- --sourcemap --watch",
+    "watch": "pnpm esbuild-watch",
     "test-compile": "tsc -p ./"
   },
   "devDependencies": {
