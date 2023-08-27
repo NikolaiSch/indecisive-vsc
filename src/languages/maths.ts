@@ -1,4 +1,4 @@
-let maths = {
+export const maths = {
   "+": "-",
   "-": "+",
 

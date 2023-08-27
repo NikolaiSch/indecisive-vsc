@@ -1,4 +1,4 @@
-let typescript = {
+export const typescript = {
   let: "const",
   const: "let",
 

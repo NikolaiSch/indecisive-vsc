@@ -1,4 +1,4 @@
-let rust = {
+export const rust = {
   i8: "isize",
   i16: "i8",
   i32: "i16",
@@ -28,6 +28,13 @@ let rust = {
   "&mut": "&dyn",
   "&dyn": "&mut",
 
+  to_uppercase: "to_lowercase",
+  to_lowercase: "to_uppercase",
+
+  into_iter: "iter",
+  iter: "iter_mut",
+  iter_mut: "into_iter",
+
   // TODO: need to figure pub and pub(self) out
 
   // TODO: need to figure out #[cfg(x)] and #[cfg(not(x))] out
@@ -47,4 +54,6 @@ let rust = {
   // TODO: if its a random long constant number, use _ for numbers clarity
 
   // TODO: maybe use Char::is_numberic() and then its !is_numberic()
+
+  // TODO: unwrap() to expect()
 }

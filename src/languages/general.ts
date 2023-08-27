@@ -1,4 +1,4 @@
-let general = {
+export const general = {
   false: "true",
   true: "false",
 

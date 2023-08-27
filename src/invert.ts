@@ -1,5 +1,23 @@
-const words = {}
+import { general, maths, python, rust, typescript } from "./languages"
 
-export function getInvertedWord(word: keyof typeof words): string {
-  return words[word]
+const words = {
+  ...rust,
+  ...general,
+  ...maths,
+  ...python,
+  ...typescript,
+}
+
+const input = Object.keys(words)
+
+export function getInvertedWord(word: string): string {
+  if (isRealWord(word)) {
+    return words[word]
+  } else {
+    throw Error("Not a real word")
+  }
+}
+
+function isRealWord(word: string): word is keyof typeof words {
+  return input.includes(word)
 }
