@@ -1,3 +1,4 @@
+import { HoverProvider } from "vscode"
 import { general, maths, python, rust, typescript } from "./languages"
 
 const words = {
@@ -20,4 +21,15 @@ export function getInvertedWord(word: string): string {
 
 function isRealWord(word: string): word is keyof typeof words {
   return input.includes(word)
+}
+
+export const hoverProvider: HoverProvider = {
+  provideHover(document, position, token) {
+    const range = document.getWordRangeAtPosition(position)
+    const word = document.getText(range)
+
+    return {
+      contents: ["Hover Content"],
+    }
+  },
 }
