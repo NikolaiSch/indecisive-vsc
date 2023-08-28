@@ -83,6 +83,7 @@
     "vscode:prepublish": "pnpm esbuild-base -- --minify",
     "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
     "esbuild": "pnpm esbuild-base -- --sourcemap",
+    "prestart": "pnpm esbuild",
     "esbuild-watch": "pnpm esbuild-base -- --sourcemap --watch",
     "watch": "pnpm esbuild-watch",
     "test-compile": "tsc -p ./"
